@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Business cd:</strong>
+  <%= @performance.business_cd %>
+</p>
+
+<p>
+  <strong>Plan:</strong>
+  <%= @performance.plan %>
+</p>
+
+<p>
+  <strong>Performance:</strong>
+  <%= @performance.performance %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @performance.user_id %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @performance.date %>
+</p>
+
+<%= link_to 'Edit', edit_performance_path(@performance) %> |
+<%= link_to 'Back', performances_path %>

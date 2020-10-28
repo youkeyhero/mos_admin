@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Performances</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Business cd</th>
+      <th>Plan</th>
+      <th>Performance</th>
+      <th>User</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @performances.each do |performance| %>
+      <tr>
+        <td><%= performance.business_cd %></td>
+        <td><%= performance.plan %></td>
+        <td><%= performance.performance %></td>
+        <td><%= performance.user_id %></td>
+        <td><%= performance.date %></td>
+        <td><%= link_to 'Show', performance %></td>
+        <td><%= link_to 'Edit', edit_performance_path(performance) %></td>
+        <td><%= link_to 'Destroy', performance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Performance', new_performance_path %>
