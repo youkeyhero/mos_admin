@@ -4,6 +4,9 @@
 
 
 <%if user_signed_in? %>
+  <%= link_to "performances", performances_path %>
+<br>
+
   <%= link_to "businesses", businesses_path%>|
   <%= link_to "Sign out", destroy_user_session_path, :method => :delete%>
 <%end%>
