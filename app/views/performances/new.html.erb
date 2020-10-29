@@ -1,7 +1,7 @@
 <h1>New Performance</h1>
 
 <% @performance.user_id = current_user.id %>
-
+<% @performance.date = Date.today.strftime('%Y%m%d') %>
 
 <%= render 'form', performance: @performance %>
 
